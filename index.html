@@ -15,12 +15,6 @@
             background-color: green;
         }
 
-        #missYouText {
-            font-size: 75px;
-            color: black;
-            margin-bottom: 20px;
-        }
-
         .pic {
             width: 370px;
             height: auto;
@@ -28,60 +22,10 @@
             position: relative;
         }
 
-        #missYouButton {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #fff;
-            color: black;
-            border: none;
-            cursor: pointer;
-        }
-
-        #missYouDisplay {
-            display: none;
-            position: fixed;
-            background-color: #fff;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
     <div id="missYouText">Merry Christmas Love!</div>
     <img class="pic" src="https://media1.tenor.com/m/a3XYWecUeAcAAAAd/blow-kiss-minion.gif" alt="kiss.jpg">
-    <button id="missYouButton" onclick="showMissYou()">Show Miss You</button>
-    <div id="missYouDisplay"></div>
-
-    <script>
-        function showMissYou() {
-            const missYouDisplay = document.getElementById("missYouDisplay");
-            const positions = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
-            const randomPosition = positions[Math.floor(Math.random() * positions.length)];
-
-            missYouDisplay.textContent = "I miss you!";
-            missYouDisplay.style.display = 'block';
-            missYouDisplay.style.position = 'fixed';
-
-            if (randomPosition.includes('top')) {
-                missYouDisplay.style.top = '10px';
-            } else {
-                missYouDisplay.style.bottom = '10px';
-            }
-
-            if (randomPosition.includes('left')) {
-                missYouDisplay.style.left = '10px';
-            } else {
-                missYouDisplay.style.right = '10px';
-            }
-
-            setTimeout(() => {
-                missYouDisplay.style.display = 'none';
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
